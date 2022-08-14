@@ -1,9 +1,16 @@
 import React, {useState} from "react";
+import Child from "./Child";
 
-const Basic = (props) => {
+const Basic = () => {
 
     const [count, setCount] = useState(0);
-    const [showemployee, setEmployee] = useState(false);
+
+    const employeeData = [
+        { id: 101, name: 'John', salary: 25000 },
+        { id: 102, name: 'David', salary: 35000 },
+        { id: 103, name: 'Charles', salary: 85000 },
+        { id: 104, name: 'Gary', salary: 50000 }
+    ]
 
     const increment = () => {
         setCount(count+1)
@@ -15,7 +22,6 @@ const Basic = (props) => {
 
     return(
         <div>
-            <h3>Hello, {props.name}</h3>
             <div>
                 <h4 className="text-primary">Count value = {count}</h4>
                 <div className="btn-group">
@@ -24,27 +30,7 @@ const Basic = (props) => {
                 </div>
             </div>
             <hr/>
-            {
-                showemployee && (
-                <table className="table">
-                    <tr>
-                        <th>Sr No.</th>
-                        <th>ID</th>
-                        <th>Name</th>
-                        <th>Salary</th>
-                    </tr>
-                    {
-                        props.employee.map((ele, i) => {
-                            return <tr key={i}>
-                                <td>{i+1}</td>
-                                <td>{ele.id}</td>
-                                <td>{ele.name}</td>
-                                <td>{ele.salary}</td>
-                            </tr>
-                        })
-                    }
-                </table>)
-            }
+            <Child name="New user" employee={employeeData} />
         </div>
     )
 }
