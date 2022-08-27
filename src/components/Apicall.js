@@ -6,6 +6,7 @@ const Apicall = () => {
     const [data, setData] = useState([]);
 
     useEffect(() => {
+        console.log('mounted');
         axios.get('https://jsonplaceholder.typicode.com/users')
         .then(res => {
             console.log('api success response : ', res.data)
@@ -15,8 +16,15 @@ const Apicall = () => {
     }, [])
 
     useEffect(() => {
+        console.log('updated');
         console.log('data available')
     }, [data])
+
+    useEffect(() => {
+        return () => {
+            console.log('component unmount')
+        }
+    }, [])
     
     return (
         <div>

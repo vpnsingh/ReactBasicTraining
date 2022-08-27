@@ -4,6 +4,7 @@ import Basic from '../components/Basic';
 import Forms from '../components/Forms';
 import Header from '../common/Header';
 import Apicall from '../components/Apicall';
+import Products from '../components/Products';
 
 const Base = () => {
   return (
@@ -18,6 +19,7 @@ const Base = () => {
                     <Route path='/forms' element={<Forms />} /> 
                     <Route path='/apicall' element={<Apicall />} />
                     <Route path="" element={<Basic/>} />
+                    <Route path='/products' element={<Products /> } />
                 </Routes>
             </section>
             <footer>

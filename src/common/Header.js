@@ -20,6 +20,9 @@ const Header = () => {
                 <li className="nav-item">
                     <Link to="/apicall" className="nav-link">API Call</Link>
                 </li>
+                <li className="nav-item">
+                    <Link to="/products" className="nav-link">Products</Link>
+                </li>
             </ul>
             </div>
         </div>
