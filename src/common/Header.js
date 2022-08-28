@@ -23,6 +23,12 @@ const Header = () => {
                 <li className="nav-item">
                     <Link to="/products" className="nav-link">Products</Link>
                 </li>
+                <li className="nav-item">
+                    <Link to="/json-server" className="nav-link">JSON-SERVER</Link>
+                </li>
+                <li className="nav-item">
+                    <Link to="/context" className="nav-link">Context API</Link>
+                </li>
             </ul>
             </div>
         </div>
