@@ -8,6 +8,9 @@ import Products from '../components/Products';
 import Mobile from '../components/crud/Mobile';
 import AddMobile from '../components/crud/AddMobile';
 import Parent from '../components/contextAPI/Parent';
+import State from '../components/useCallback/State';
+import MemoExample from '../components/MemoExample';
+import RefExample from '../components/refExample';
 
 const Base = () => {
   return (
@@ -26,6 +29,9 @@ const Base = () => {
                     <Route path='/json-server' element={<Mobile /> } />
                     <Route path='/json-server/add' element={<AddMobile /> } />
                     <Route path='/context' element={<Parent /> } />
+                    <Route path='/callback' element={<State /> } />
+                    <Route path='/memo' element={<MemoExample /> } />
+                    <Route path='/ref' element={<RefExample /> } />
                 </Routes>
             </section>
             <footer>

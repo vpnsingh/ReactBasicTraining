@@ -29,6 +29,12 @@ const Header = () => {
                 <li className="nav-item">
                     <Link to="/context" className="nav-link">Context API</Link>
                 </li>
+                <li className="nav-item">
+                    <Link to="/memo" className="nav-link">useMemo</Link>
+                </li>
+                <li className="nav-item">
+                    <Link to="/ref" className="nav-link">useRef</Link>
+                </li>
             </ul>
             </div>
         </div>
